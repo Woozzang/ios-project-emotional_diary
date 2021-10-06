@@ -1,6 +1,6 @@
 # Emotional Diary
 
-<img src="/Resources/ezgif-1-7ec76987bbad.gif" width="50%">
+<img src="/Resources/ezgif-1-7ec76987bbad.gif" width="40%">
 
 <br /><br />
 
@@ -24,7 +24,7 @@
 → **UserDefaults** 를 사용해보자 (목표 달성!!!!!!!!!)
 <br /><br />
 
-<img src="/Resources/ezgif-1-c3179d60b50f.gif" width="50%">
+<img src="/Resources/ezgif-1-c3179d60b50f.gif" width="40%">
 
 # 정리해볼 점
 
