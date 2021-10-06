@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diary Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DiaryMainViewController" customModule="EmotionalDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shr-Ce-HHM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mono_background" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-ZN-ueq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPP-3k-77q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="59T-3P-gE6"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dXX-EK-oeW">
+                                <rect key="frame" x="57" y="273" width="300" height="340"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cMB-A7-4Pv">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="110"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PI3-EW-iOx">
+                                        <rect key="frame" x="0.0" y="115" width="300" height="110"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WIb-ld-ua8">
+                                        <rect key="frame" x="0.0" y="230" width="300" height="110"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Shr-Ce-HHM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8UC-Sv-9C8"/>
+                            <constraint firstItem="Shr-Ce-HHM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EuT-Yg-8hB"/>
+                            <constraint firstItem="ao7-ZN-ueq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OIj-hK-Jxg"/>
+                            <constraint firstItem="aPP-3k-77q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gZG-1u-8vC"/>
+                            <constraint firstAttribute="bottom" secondItem="ao7-ZN-ueq" secondAttribute="bottom" id="ggU-9k-frE"/>
+                            <constraint firstItem="aPP-3k-77q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jnj-pS-Bmv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aPP-3k-77q" secondAttribute="trailing" id="nxG-1x-VeM"/>
+                            <constraint firstItem="Shr-Ce-HHM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="orZ-Tl-yv2"/>
+                            <constraint firstItem="aPP-3k-77q" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.0537897" id="oya-6m-dkY"/>
+                            <constraint firstAttribute="bottom" secondItem="Shr-Ce-HHM" secondAttribute="bottom" id="rC9-Zc-Uev"/>
+                            <constraint firstItem="ao7-ZN-ueq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t4l-S6-LGi"/>
+                            <constraint firstItem="ao7-ZN-ueq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t91-OO-kG4"/>
+                            <constraint firstItem="dXX-EK-oeW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xIW-cc-54Q"/>
+                            <constraint firstItem="dXX-EK-oeW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zAJ-qb-bIh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="aPP-3k-77q" id="S0o-ob-GFO"/>
+                        <outlet property="verticalStackView" destination="dXX-EK-oeW" id="M4Q-KL-J5M"/>
+                        <outletCollection property="horizontalStackViews" destination="cMB-A7-4Pv" collectionClass="NSMutableArray" id="75f-mD-gTr"/>
+                        <outletCollection property="horizontalStackViews" destination="PI3-EW-iOx" collectionClass="NSMutableArray" id="fZZ-2l-pNA"/>
+                        <outletCollection property="horizontalStackViews" destination="WIb-ld-ua8" collectionClass="NSMutableArray" id="FPJ-Fd-SVy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mono_background" width="1000" height="1500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
