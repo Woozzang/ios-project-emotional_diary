@@ -30,19 +30,22 @@
                                     <navigationItem id="59T-3P-gE6"/>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dXX-EK-oeW">
-                                <rect key="frame" x="57" y="273" width="300" height="340"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dXX-EK-oeW">
+                                <rect key="frame" x="30" y="247.5" width="354" height="401"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cMB-A7-4Pv">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cMB-A7-4Pv">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="130.5"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PI3-EW-iOx">
-                                        <rect key="frame" x="0.0" y="115" width="300" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PI3-EW-iOx">
+                                        <rect key="frame" x="0.0" y="135.5" width="354" height="130"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WIb-ld-ua8">
-                                        <rect key="frame" x="0.0" y="230" width="300" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WIb-ld-ua8">
+                                        <rect key="frame" x="0.0" y="270.5" width="354" height="130.5"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dXX-EK-oeW" secondAttribute="height" multiplier="15:17" id="iDq-Xa-NGk"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,8 +61,10 @@
                             <constraint firstItem="Shr-Ce-HHM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="orZ-Tl-yv2"/>
                             <constraint firstItem="aPP-3k-77q" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.0537897" id="oya-6m-dkY"/>
                             <constraint firstAttribute="bottom" secondItem="Shr-Ce-HHM" secondAttribute="bottom" id="rC9-Zc-Uev"/>
+                            <constraint firstItem="dXX-EK-oeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rj3-hP-I5J"/>
                             <constraint firstItem="ao7-ZN-ueq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t4l-S6-LGi"/>
                             <constraint firstItem="ao7-ZN-ueq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t91-OO-kG4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dXX-EK-oeW" secondAttribute="trailing" constant="30" id="usQ-TJ-zru"/>
                             <constraint firstItem="dXX-EK-oeW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xIW-cc-54Q"/>
                             <constraint firstItem="dXX-EK-oeW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zAJ-qb-bIh"/>
                         </constraints>

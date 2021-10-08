@@ -9,9 +9,9 @@ import UIKit
 
 final class CustomEmotionView: UIView {
   
-  private let imageView: UIImageView = UIImageView()
-  private let titleLabel: UILabel = UILabel()
-  private let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+  private let imageView: UIImageView!
+  private let titleLabel: UILabel!
+  private let tapGesture: UITapGestureRecognizer!
   
   let userDefaultskey: String
   let predefinedFrameWidth: CGFloat = 118
@@ -28,33 +28,24 @@ final class CustomEmotionView: UIView {
   
   init(image: UIImage, title: String, key: String) {
     
-    self.userDefaultskey = key
+    imageView = UIImageView(image: image)
+    titleLabel = UILabel()
+    tapGesture = UITapGestureRecognizer()
+    
+    userDefaultskey = key
     
     super.init(frame:.zero)
     
-    self.isUserInteractionEnabled = true
+    isUserInteractionEnabled = true
     
-    self.imageView.image = image
-    self.imageView.contentMode = .scaleAspectFit
+    addSubview(imageView)
+    addSubview(titleLabel)
     
-
-    self.titleLabel.text = title
-    self.titleLabel.textAlignment = .center
+    addGestureRecognizer(tapGesture)
+    tapGesture.addTarget(self, action: #selector(didTapCustomView))
     
-    self.addGestureRecognizer(tapGesture)
-    self.tapGesture.addTarget(self, action: #selector(didTapCustomView))
-    
-    self.addSubview(imageView)
-    self.addSubview(titleLabel)
-    
-    self.translatesAutoresizingMaskIntoConstraints = false
-    
-    imageView.translatesAutoresizingMaskIntoConstraints = false
-    
-    titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    
-    setUpBoundsConstraint()
-    setUpSubviews()
+    setUpImageView()
+    setUpTitleLabel(with: title)
   }
   
   /**
@@ -64,28 +55,29 @@ final class CustomEmotionView: UIView {
     fatalError("Init with Coder is not allowed.")
   }
   
-  private func setUpBoundsConstraint() {
+  private func setUpImageView() {
     
-//    self.widthAnchor.constraint(lessThanOrEqualToConstant: predefinedFrameWidth).isActive = true
-//
-//    self.heightAnchor.constraint(lessThanOrEqualToConstant: predefinedFrameHeight).isActive = true
+    imageView.contentMode = .scaleAspectFit
+
+    imageView.translatesAutoresizingMaskIntoConstraints = false
     
-    self.widthAnchor.constraint(equalToConstant: predefinedFrameWidth).isActive = true
-    self.heightAnchor.constraint(equalToConstant: predefinedFrameHeight).isActive = true
+    imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+    imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+    imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 87/101).isActive = true
   }
   
-  private func setUpSubviews() {
-
-    imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-    imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
-    imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-    imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -8).isActive = true
-
-
+  private func setUpTitleLabel(with text: String) {
+    
+    titleLabel.text = text
+    titleLabel.textAlignment = .center
+    
+    titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    
+    titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
     titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
     titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-
   }
   
   @objc func didTapCustomView() {
